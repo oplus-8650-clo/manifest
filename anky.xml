@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="glab" fetch="https://gitlab.com/" revision="vauxite" />
+
+  <remove-project name="platform/external/dtc" />
+  <project name="test-404-1/android_external_dtc" path="external/dtc" remote="aospa" />
+
+  <!-- main-->
+  <project path="device/oneplus/avalon" name="test-404-1/android_device_oneplus_avalon" remote="aospa" />
+  <project path="device/oneplus/avalon-kernel" name="anky894/android_device_oneplus_avalon-kernel" remote="glab" />
+  <project path="device/oneplus/sm8650-common" name="test-404-1/android_device_oneplus_sm8650-common" remote="aospa" />
+  <project path="hardware/oplus" name="test-404-1/android_hardware_oplus" remote="aospa" />
+
+  <project path="vendor/oneplus/avalon" name="test-404-1/proprietary_vendor_oneplus_avalon" remote="aospa" />
+  <project path="vendor/oneplus/sm8650-common" name="test-404-1/proprietary_vendor_oneplus_sm8650-common" remote="aospa" />
+
+</manifest>

@@ -52,4 +52,7 @@
   <include name="aospa.xml"/>
   <include name="obsolete.xml"/>
 
+  <!-- anky -->
+  <include name="anky.xml" />
+
 </manifest>
