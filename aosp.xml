@@ -21,6 +21,8 @@
   <project path="external/kotlinc" name="platform/external/kotlinc" remote="aosp" clone-depth="1" />
   <remove-project name="platform/external/linux-kselftest" />
   <project path="external/linux-kselftest" name="platform/external/linux-kselftest" remote="aosp" clone-depth="1" />
+  <remove-project name="platform/external/tinycompress" />
+  <project path="external/tinycompress" name="platform/external/tinycompress" remote="aosp" clone-depth="1" />
 
   <!-- Prebuilts -->
   <remove-project name="platform/prebuilts/clang-tools" />

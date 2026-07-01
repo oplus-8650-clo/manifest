@@ -25,7 +25,7 @@
   <remote  name="aospa"
            fetch=".."
            review="gerrit-ssh.aospa.co"
-           revision="beryl"/>
+           revision="cq2a"/>
 
   <remote  name="bitbucket"
            fetch="https://bitbucket.org"
