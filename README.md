@@ -41,7 +41,7 @@ cd WORKSPACE
 Initialize the manifest repository:
 Use your real name and email address if you plan to submit patches.
 ```bash
-repo init -u https://github.com/AOSPA/manifest -b calcite
+repo init -u https://github.com/oplus-8650-clo/manifest -b calcite
 ```
 
 ### Download the source tree
