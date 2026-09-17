@@ -32,6 +32,9 @@
   </project>
   <remove-project name="device/qcom/sepolicy_vndr" />
   <project path="device/qcom/sepolicy_vndr" name="AOSPA/android_device_qcom_sepolicy_vndr" remote="aospa" />
+  <project path="device/qcom/kernelscripts" name="AOSPA/android_kernel_build" remote="aospa" >
+    <linkfile dest="vendor/qcom/build/tasks/kernel_definitions.mk" src="kernel_definitions.mk"/>
+  </project>
 
   <!-- External -->
   <remove-project name="platform/external/arm-optimized-routines" />
@@ -67,12 +70,6 @@
   <!-- Kernel -->
   <remove-project name="kernel/configs" />
   <project path="kernel/configs" name="AOSPA/android_kernel_configs" remote="aospa" />
-
-  <!-- LineageOS Kernel build -->
-  <remove-project name="platform/external/dtc" />
-  <project path="external/dtc" name="oplus-8650-clo/android_external_dtc" remote="github" revision="calcite" />
-  <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" remote="aosp" revision="main-kernel-2025" />
-  <project path="prebuilts/tools-lineage" name="LineageOS/android_prebuilts_tools-lineage" clone-depth="1" revision="lineage-24.0" remote="github" />
 
   <!-- Manifest -->
   <project path="manifest" name="oplus-8650-clo/manifest" remote="aospa" />
