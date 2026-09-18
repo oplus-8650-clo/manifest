@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest>
+  <!-- AU_TECHPACK_AUDIO.LA.9.0.R1.00.00.00.000.070 -->
+  <project remote="clo-la" name="platform/hardware/qcom/audio-ar" path="vendor/qcom/opensource/audio-hal/primary-hal" revision="1e870b74cc6ceb28833ac2ff545cd92d99383594" upstream="refs/heads/audio-android-hal.lnx.3.0.r10-rel" groups="base">
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/audio_vendor_product.mk" src="configs/audio_vendor_product.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/audio-techpack.mk" src="configs/{target_product}/audio-techpack.mk" />
+  </project>
+  <project remote="clo-la" name="platform/vendor/qcom/opensource/audio-kernel-ar" path="vendor/qcom/opensource/audio-kernel" revision="0dbde6cfa374af7bd98ba891a187cef1ac4bfc1d" upstream="refs/heads/audio-kernel.lnx.6.0.r1-rel" groups="kernel">
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/audio_kernel_vendor_board.mk" src="audio_kernel_vendor_board.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/audio_kernel_product_board.mk" src="audio_kernel_product_board.mk" />
+  </project>
+  <!-- AU_TECHPACK_CAMERA.LA.4.0.R2.00.00.00.000.066 -->
+  <project remote="clo-la" name="platform/vendor/opensource/camera-kernel" path="vendor/qcom/opensource/camera-kernel" revision="d0aff24e7567ef99615f18ed263d7c566f384089" upstream="refs/heads/camera-kernel.lnx.7.0.r2-rel">
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/camera-kernel_board.mk" src="board.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/camera-kernel_product.mk" src="product.mk" />
+  </project>
+  <!-- AU_TECHPACK_CV.LA.2.0.R1.00.00.00.000.048 -->
+  <project remote="clo-la" name="platform/vendor/opensource/eva-kernel" path="vendor/qcom/opensource/eva-kernel" revision="c1ff9cd986e7dd66ecf6b385b92ac3de85c76f4e" upstream="refs/heads/eva-kernel.lnx.3.0.r1-rel">
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/eva_kernel_product.mk" src="eva_kernel_product.mk" />
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/eva_kernel_board.mk" src="eva_kernel_board.mk" />
+  </project>
+  <!-- AU_TECHPACK_DISPLAY.LA.4.0.R2.00.00.00.000.072 -->
+  <project remote="clo-la" name="meta-qti-display" path="meta-qti-display" revision="e72505200949303a0c2341d0451f73f5c72196d1" upstream="refs/heads/display-le.lnx.4.0.r2-rel" />
+  <project remote="clo-la" name="platform/vendor/opensource/display-drivers" path="vendor/qcom/opensource/display-drivers" revision="110735449b7949635052e81efc9fc41bcafb7794" upstream="refs/heads/display-kernel.lnx.1.0.r2-rel">
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/display_driver_product.mk" src="display_driver_product.mk" />
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/display_driver_board.mk" src="display_driver_board.mk" />
+  </project>
+  <project remote="clo-la" name="platform/vendor/opensource/mm-drivers" path="vendor/qcom/opensource/mm-drivers" revision="f37d625cda5ef9f033b3d34d9c1a64c52ebc51c2" upstream="refs/heads/display-kernel.lnx.1.0.r2-rel">
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/mm_driver_product.mk" src="mm_driver_product.mk" />
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/mm_driver_board.mk" src="mm_driver_board.mk" />
+  </project>
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/display/sdm-composer" path="vendor/qcom/opensource/display/sdm-composer" revision="ce267cfb79a1419578594d00163fd3598e018469" upstream="refs/heads/display-le.lnx.4.0.r2-rel" />
+  <!-- AU_TECHPACK_GRAPHICS.LA.14.0.R1.00.00.00.000.073 -->
+  <project remote="clo-la" name="platform/vendor/qcom/opensource/graphics-kernel" path="vendor/qcom/opensource/graphics-kernel" revision="cfe7735d45e9894646d94435abea07a731805b74" upstream="refs/heads/gfx-kernel.lnx.1.0.r15-rel" />
+  <!-- AU_LINUX_KERNEL.PLATFORM.3.0.R1.00.00.00.017.100 -->
+  <project remote="clo-la" name="abl/tianocore/edk2" path="kernel_platform/bootable/bootloader/edk2" revision="f5ac223fd4ec980eb9024294a17ab383ebf34964" upstream="refs/heads/uefi.lnx.4.0.r14-rel" />
+  <project remote="clo-la" name="kernel/build" path="kernel_platform/build/kernel" revision="30afc55d474d2a1467e9c296e7a645c045450f9b" upstream="refs/heads/kernel.lnx.6.1.r2-rel">
+    <linkfile dest="kernel_platform/tools/bazel" src="kleaf/bazel.sh" />
+    <linkfile dest="kernel_platform/build/build.sh" src="build.sh" />
+    <linkfile dest="kernel_platform/build/build_abi.sh" src="build_abi.sh" />
+    <linkfile dest="kernel_platform/build/build_test.sh" src="build_test.sh" />
+    <linkfile dest="kernel_platform/build/build_utils.sh" src="build_utils.sh" />
+    <linkfile dest="kernel_platform/build/all-variants.sh" src="all-variants.sh" />
+    <linkfile dest="kernel_platform/build/brunch" src="brunch" />
+    <linkfile dest="kernel_platform/build/build_abl.sh" src="build_abl.sh" />
+    <linkfile dest="kernel_platform/build/build_module.sh" src="build_module.sh" />
+    <linkfile dest="kernel_platform/build/android/export_headers.py" src="android/export_headers.py" />
+    <linkfile dest="kernel_platform/build/android/merge_dtbs.py" src="android/merge_dtbs.py" />
+    <linkfile dest="kernel_platform/build/android/merge_dtbs.sh" src="android/merge_dtbs.sh" />
+    <linkfile dest="kernel_platform/build/android/prepare_vendor.sh" src="android/prepare_vendor.sh" />
+    <linkfile dest="kernel_platform/build/BUILD.bazel" src="BUILD.bazel" />
+    <linkfile dest="kernel_platform/build/build-tools/path" src="build-tools/path" />
+    <linkfile dest="kernel_platform/build/config.sh" src="config.sh" />
+    <linkfile dest="kernel_platform/build/envsetup.sh" src="envsetup.sh" />
+    <linkfile dest="kernel_platform/build/_setup_env.sh" src="_setup_env.sh" />
+    <linkfile dest="kernel_platform/build/multi-switcher.sh" src="multi-switcher.sh" />
+    <linkfile dest="kernel_platform/build/kleaf" src="kleaf" />
+    <linkfile dest="kernel_platform/build/abi" src="abi" />
+    <linkfile dest="kernel_platform/build/static_analysis" src="static_analysis" />
+    <linkfile dest="kernel_platform/build/_wrapper_common.sh" src="_wrapper_common.sh" />
+  </project>
+  <project remote="clo-la" name="kernel/common" path="kernel_platform/common" revision="09f8502a88b144471b7019774119568239930952" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel">
+    <linkfile dest="kernel_platform/.source_date_epoch_dir" src="." />
+  </project>
+  <project remote="clo-la" name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" revision="d153b7ab4a4956198957e258d4f370e875c53059" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel" clone-depth="1">
+    <linkfile dest="kernel_platform/build/prebuilts/kernel-build-tools" src="." />
+  </project>
+  <project remote="clo-la" name="kernel/qcom" path="kernel_platform/msm-kernel" revision="84905449098b147a0fe8a13a9ab0485db25841ed" upstream="refs/heads/kernel.lnx.6.1.r2-rel">
+    <linkfile dest="kernel_platform/WORKSPACE" src="bazel.WORKSPACE" />
+    <linkfile dest="kernel_platform/build_with_bazel.py" src="build_with_bazel.py" />
+  </project>
+  <project remote="clo-la" name="kernel_platform/build/bazel_common_rules" path="kernel_platform/build/bazel_common_rules" revision="415b543d5e1d270a22f8c6ae9d848b3560472062" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel" />
+  <project remote="clo-la" name="kernel_platform/external/bazel-skylib" path="kernel_platform/external/bazel-skylib" revision="7fdbc462f5001b7e82f026aa90bd43c494e2a8d8" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel" />
+  <project remote="clo-la" name="kernel_platform/external/dtc" path="kernel_platform/external/dtc" revision="3a8c1bbce993f9143835c7f40eeefcdf948cfaf5" upstream="refs/heads/kernel.build.lnx.1.0.r15-rel" />
+  <project remote="clo-la" name="kernel_platform/external/python/absl-py" path="kernel_platform/external/python/absl-py" revision="e46584edbb247bf79c74c4f105b6fff18234cee8" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel" />
+  <project remote="clo-la" name="kernel_platform/external/stardoc" path="kernel_platform/external/stardoc" revision="0d74fed6f8d0844f696771e71bc0b071cae99021" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel" />
+  <project remote="clo-la" name="kernel_platform/prebuilts/bazel/linux-x86_64" path="kernel_platform/prebuilts/bazel/linux-x86_64" revision="eee09422f02e60f28192bcb5a8ce8660baba6706" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel" clone-depth="1" />
+  <project remote="clo-la" name="kernel_platform/prebuilts/build-tools" path="kernel_platform/prebuilts/build-tools" revision="cad7e11de82b3307000e09c9d539b2700bd17aea" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel" clone-depth="1">
+    <linkfile dest="kernel_platform/build/prebuilts/build-tools" src="." />
+  </project>
+  <project remote="clo-la" name="kernel_platform/prebuilts/clang-tools" path="kernel_platform/prebuilts/clang-tools" revision="0613fc5443d035335a9541994607bacae03750f2" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel" clone-depth="1">
+    <linkfile dest="kernel_platform/build/prebuilts/clang-tools" src="." />
+  </project>
+  <project remote="clo-la" name="kernel_platform/prebuilts/jdk/jdk11" path="kernel_platform/prebuilts/jdk/jdk11" revision="ced68c9308cbc1b6ec3e602dba8d0d56df8b6d73" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel" clone-depth="1" />
+  <project remote="clo-la" name="kernel_platform/system/tools/mkbootimg" path="kernel_platform/tools/mkbootimg" revision="b17f184a20744a7e0a421f901bdf20a23be22b07" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel" />
+  <project remote="clo-la" name="kernel_platform/toolchain/prebuilts/ndk/r23" path="kernel_platform/prebuilts/ndk-r23" revision="269a5dc9e862f78dc2030d9262f73cb2642b8127" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel" clone-depth="1" />
+  <project remote="clo-la" name="kernelplatform/prebuilts-master/clang/host/linux-x86" path="kernel_platform/prebuilts/clang/host/linux-x86" revision="28b975ada54f8610ed531a6b57253aed10e7c87d" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel" clone-depth="1" />
+  <project remote="clo-la" name="kernelplatform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="kernel_platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" revision="dd099b5d68822602228e2af66693e61e7b54e0a9" upstream="refs/heads/ks-kernel.lnx.3.0.r1-rel" clone-depth="1">
+    <linkfile dest="kernel_platform/build/build-tools/sysroot" src="sysroot" />
+  </project>
+  <!-- AU_TECHPACK_VIDEO.LA.4.0.R2.00.00.00.000.059 -->
+  <project remote="clo-la" name="platform/vendor/opensource/mmrm-driver" path="vendor/qcom/opensource/mmrm-driver" revision="35211a9255b69d52ddc2b82dc8b1dd2840b98868" upstream="refs/heads/mmrm-kernel.lnx.4.0.r2-rel" groups="cyborg">
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/mmrm_kernel_board.mk" src="mmrm_kernel_board.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/mmrm_kernel_product.mk" src="mmrm_kernel_product.mk" />
+  </project>
+  <project remote="clo-la" name="platform/vendor/opensource/video-driver" path="vendor/qcom/opensource/video-driver" revision="add9bd398ae6c12ea07fe9c0f0c2479808994007" upstream="refs/heads/video-kernel.lnx.4.0.r2-rel" groups="cyborg">
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/video_kernel_product.mk" src="video_kernel_product.mk" />
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/video_kernel_board.mk" src="video_kernel_board.mk" />
+  </project>
+  <project remote="clo-la" name="platform/vendor/qcom/opensource/video-qapi" path="vendor/qcom/opensource/video-qapi" revision="4acca4ec7ca1dbdf43d58e6381f3785cda113b09" upstream="refs/heads/video-userspace.lnx.codec2.4.0.r3-rel" />
+  <!-- Base Manifest -->
+  <project remote="clo-la" name="platform/vendor/opensource/dataipa" path="vendor/qcom/opensource/dataipa" revision="7ade50ae5ed68ed1adec024efc9a042d760dd120" upstream="refs/heads/data-kernel.lnx.3.0.r1-rel">
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/dataipa_dlkm_vendor_board.mk" src="dataipa_dlkm_vendor_board.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/dataipa_dlkm_vendor_product.mk" src="dataipa_dlkm_vendor_product.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/dataipa_binary_vendor_product.mk" src="dataipa_binary_vendor_product.mk" />
+  </project>
+  <project remote="clo-la" name="platform/vendor/opensource/mm-sys-kernel" path="vendor/qcom/opensource/mm-sys-kernel" revision="88eb9646a400c3c70d3614c3912af530dd332060" upstream="refs/heads/ubwcp-kernel.lnx.1.0.r1-rel">
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/ubwcp_kernel_vendor_board.mk" src="ubwcp_kernel_vendor_board.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/ubwcp_kernel_product_board.mk" src="ubwcp_kernel_product_board.mk" />
+  </project>
+  <project remote="clo-la" name="platform/vendor/opensource/synx-kernel" path="vendor/qcom/opensource/synx-kernel" revision="7dc44e00982ed5740fab8ad249af0b4ea845fff3" upstream="refs/heads/synx-kernel.lnx.1.0.r1-rel">
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/synx_kernel_product.mk" src="synx_kernel_product.mk" />
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/synx_kernel_board.mk" src="synx_kernel_board.mk" />
+  </project>
+  <project remote="clo-la" name="platform/vendor/opensource/touch-drivers" path="vendor/qcom/opensource/touch-drivers" revision="d219ea822c89ffa2fa246e3caf45b64e81811154" upstream="refs/heads/touch-kernel.lnx.5.15.r8-rel">
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/touch_driver_board.mk" src="touch_driver_board.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/touch_driver_product.mk" src="touch_driver_product.mk" />
+  </project>
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/bt-kernel" path="vendor/qcom/opensource/bt-kernel" revision="abeb53d57fb210fc51839143b6ce9292c595c424" upstream="refs/heads/bt-kernel.lnx.14.0.r1-rel">
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/bt_kernel_vendor_board.mk" src="bt_kernel_vendor_board.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/bt_kernel_product_board.mk" src="bt_kernel_product_board.mk" />
+  </project>
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/wlan/fw-api" path="vendor/qcom/opensource/wlan/fw-api" revision="e157a886749af4a591d29af2763a38c5f177eda0" upstream="refs/heads/wlan-api.lnx.1.0.r176-rel" />
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/wlan/platform" path="vendor/qcom/opensource/wlan/platform" revision="cac970f21e0b5488ab03e7ec821d1563075945d8" upstream="refs/heads/wlan-platform.lnx.1.0.r17-rel" />
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/wlan/qca-wifi-host-cmn" path="vendor/qcom/opensource/wlan/qca-wifi-host-cmn" revision="6997e9f06a3c5a762a28f750e97143ad214bba23" upstream="refs/heads/wlan-cmn.driver.lnx.2.0.r110-rel" />
+  <project remote="clo-la" name="platform/vendor/qcom-opensource/wlan/qcacld-3.0" path="vendor/qcom/opensource/wlan/qcacld-3.0" revision="1351c18d6fc04dd339859d6a8bdad20a34b026d1" upstream="refs/heads/wlan-cld3.driver.lnx.2.0.r112-rel" />
+  <project remote="clo-la" name="platform/vendor/qcom/opensource/datarmnet" path="vendor/qcom/opensource/datarmnet" revision="c5d70f15d54c8489bd452d52729bcfcd301ab985" upstream="refs/heads/data-kernel.lnx.3.0.r1-rel">
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/datarmnet_dlkm_vendor_board.mk" src="datarmnet_dlkm_vendor_board.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/datarmnet_dlkm_vendor_product.mk" src="datarmnet_dlkm_vendor_product.mk" />
+  </project>
+  <project remote="clo-la" name="platform/vendor/qcom/opensource/datarmnet-ext" path="vendor/qcom/opensource/datarmnet-ext" revision="e7a27480ae7c8dbc5508a8dcfa69c5628d3afe2d" upstream="refs/heads/data-kernel.lnx.3.0.r1-rel">
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/datarmnet_ext_dlkm_vendor_board.mk" src="datarmnet_ext_dlkm_vendor_board.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/datarmnet_ext_dlkm_vendor_product.mk" src="datarmnet_ext_dlkm_vendor_product.mk" />
+  </project>
+  <project remote="clo-la" name="platform/vendor/qcom/opensource/dsp-kernel" path="vendor/qcom/opensource/dsp-kernel" revision="7dc8e0970bdc08366559af636e2bca8d6df19f8f" upstream="refs/heads/dsp-kernel.lnx.1.0.r2-rel">
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/dsp_kernel_board.mk" src="dsp_kernel_board.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/dsp_kernel_product.mk" src="dsp_kernel_product.mk" />
+  </project>
+  <project remote="clo-la" name="platform/vendor/qcom/opensource/securemsm-kernel" path="vendor/qcom/opensource/securemsm-kernel" revision="aef65998bda93dd731012cadb21851f53420ea96" upstream="refs/heads/sec-kernel.lnx.14.0.r1-rel">
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/securemsm_kernel_product_board.mk" src="securemsm_kernel_product_board.mk" />
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/securemsm_kernel_vendor_board.mk" src="securemsm_kernel_vendor_board.mk" />
+  </project>
+  <project remote="clo-la" name="platform/vendor/qcom/opensource/spu-kernel" path="vendor/qcom/opensource/spu-kernel" revision="0edbf1a122b5f3d26a5bd27f53a1a0b8dbedf360" upstream="refs/heads/spu-kernel.lnx.1.0.r1-rel">
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/spu_driver_board.mk" src="spu_driver_board.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/spu_driver_product.mk" src="spu_driver_product.mk" />
+  </project>
+  <project remote="clo-la" name="platform/vendor/st/opensource/eSE-driver" path="vendor/st/opensource/eSE-driver" revision="b84d9b9d8a06b297ea967e3bef4109bff5ec8379" upstream="refs/heads/ese-st-vendor.lnx.14.0.r1-rel">
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/ese_kernel_product.mk" src="ese_kernel_product.mk" />
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/ese_kernel_board.mk" src="ese_kernel_board.mk" />
+  </project>
+</manifest>
