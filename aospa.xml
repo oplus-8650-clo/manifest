@@ -147,6 +147,7 @@
   <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy" name="AOSPA/android_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="aospa" revision="calcite-legacy" />
   <remove-project name="platform/vendor/qcom-opensource/dataservices" />
   <project path="vendor/qcom/opensource/dataservices" name="AOSPA/android_vendor_qcom-opensource_dataservices" remote="aospa" />
+  <project path="vendor/qcom/opensource/libvmmem" name="AOSPA/android_vendor_qcom_opensource_libvmmem" remote="aospa" />
   <remove-project name="platform/vendor/qcom-opensource/power" />
   <project path="vendor/qcom/opensource/power" name="AOSPA/android_vendor_qcom-opensource_power" remote="aospa" />
   <remove-project name="platform/system/qcom" />
