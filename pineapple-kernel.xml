@@ -1,16 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <manifest>
   <!-- AU_TECHPACK_AUDIO.LA.9.0.R1.00.00.00.000.091 -->
-  <project remote="clo-la" name="platform/hardware/qcom/audio-ar" path="vendor/qcom/opensource/audio-hal/primary-hal" revision="89d32774e85832bd2368032a7eaebc154f77b6d1" upstream="refs/heads/audio-android-hal.lnx.3.0.r10-rel" groups="base">
-    <linkfile dest="vendor/qcom/defs/product-defs/vendor/audio_vendor_product.mk" src="configs/audio_vendor_product.mk" />
-    <linkfile dest="vendor/qcom/defs/product-defs/vendor/audio-techpack.mk" src="configs/{target_product}/audio-techpack.mk" />
-  </project>
   <project remote="clo-la" name="platform/vendor/qcom/opensource/audio-kernel-ar" path="vendor/qcom/opensource/audio-kernel" revision="3176d0df29c2930a287d2840121fe76e056cfdba" upstream="refs/heads/audio-kernel.lnx.6.0.r1-rel" groups="kernel">
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/audio_kernel_vendor_board.mk" src="audio_kernel_vendor_board.mk" />
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/audio_kernel_product_board.mk" src="audio_kernel_product_board.mk" />
   </project>
   <!-- AU_TECHPACK_CAMERA.LA.4.0.R2.00.00.00.000.096 -->
-  <project remote="clo-la" name="meta-qti-camera" path="poky/meta-qti-camera" revision="1bb267eeb15610b422b401fd31adbff8be594e9d" upstream="refs/heads/camera-meta.le.7.0.r5-rel" />
   <project remote="clo-la" name="platform/vendor/opensource/camera-kernel" path="vendor/qcom/opensource/camera-kernel" revision="db93e61705f7a8a20d9b4896307f80fb904ca767" upstream="refs/heads/camera-kernel.lnx.7.0.r2-rel">
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/camera-kernel_board.mk" src="board.mk" />
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/camera-kernel_product.mk" src="product.mk" />
@@ -124,9 +119,6 @@
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/bt_kernel_vendor_board.mk" src="bt_kernel_vendor_board.mk" />
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/bt_kernel_product_board.mk" src="bt_kernel_product_board.mk" />
   </project>
-  <project remote="clo-la" name="platform/vendor/qcom-opensource/data-ipa-cfg-mgr" path="vendor/qcom/opensource/data-ipa-cfg-mgr" revision="8422eb7da542f3fd330576f1d39e3b32fd28393c" upstream="refs/heads/data.lnx.14.0.r1-rel">
-    <linkfile dest="vendor/qcom/defs/product-defs/vendor/ipacm_vendor_product.mk" src="ipacm_vendor_product.mk" />
-  </project>
   <project remote="clo-la" name="platform/vendor/qcom-opensource/wlan/fw-api" path="vendor/qcom/opensource/wlan/fw-api" revision="1dfe638abcf0aba66965742ec452c935c69c19b7" upstream="refs/heads/wlan-api.lnx.1.0.r176-rel" />
   <project remote="clo-la" name="platform/vendor/qcom-opensource/wlan/platform" path="vendor/qcom/opensource/wlan/platform" revision="8cf79ed25f2d9eae20b1873f22e1f187d58fc39f" upstream="refs/heads/wlan-platform.lnx.1.0.r17-rel" />
   <project remote="clo-la" name="platform/vendor/qcom-opensource/wlan/qca-wifi-host-cmn" path="vendor/qcom/opensource/wlan/qca-wifi-host-cmn" revision="381b9c881a34b62efdd05c45c3a624fec1a6af97" upstream="refs/heads/wlan-cmn.driver.lnx.2.0.r110-rel" />
@@ -155,4 +147,35 @@
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/ese_kernel_product.mk" src="ese_kernel_product.mk" />
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/ese_kernel_board.mk" src="ese_kernel_board.mk" />
   </project>
+
+  <project remote="aospa" name="8650-kernel/kernel_platform_qcom_proprietary_devicetree" path="kernel_platform/qcom/proprietary/devicetree" groups="kernel"/>
+  <project remote="aospa" name="8650-kernel/kernel_platform_oplus" path="kernel_platform/oplus" groups="kernel"/>
+  <project remote="aospa" name="8650-kernel/vendor_oplus" path="vendor/oplus" groups="kernel"/>
+  <project remote="aospa" name="8650-kernel/vendor_nxp_opensource_driver" path="vendor/nxp/opensource/driver" groups="kernel">
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/nfc_kernel_dlkm_vendor_board.mk" src="nfc_kernel_dlkm_vendor_board.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/nfc_kernel_dlkm_vendor_product.mk" src="nfc_kernel_dlkm_vendor_product.mk" />
+  </project>
+  <project remote="aospa" name="8650-kernel/vendor_st_opensource_driver" path="vendor/st/opensource/driver" groups="kernel">
+    <linkfile dest="vendor/qcom/defs/board-defs/vendor/nfc_kernel_dlkm_vendor_board-stm.mk" src="nfc_kernel_dlkm_vendor_board.mk" />
+    <linkfile dest="vendor/qcom/defs/product-defs/vendor/nfc_kernel_dlkm_vendor_product-stm.mk" src="nfc_kernel_dlkm_vendor_product.mk" />
+  </project>
+  <project remote="aospa" name="AOSPA/android_kernel_qcom-headers" path="kernel/qcom-headers" groups="kernel"/>
+
+  <!-- Devicetrees -->
+  <project remote="aospa" name="8650-kernel/vendor_qcom_proprietary_audio-devicetree" path="vendor/qcom/proprietary/audio-devicetree"/>
+  <project remote="aospa" name="8650-kernel/vendor_qcom_proprietary_bt-devicetree" path="vendor/qcom/proprietary/bt-devicetree"/>
+  <project remote="aospa" name="8650-kernel/vendor_qcom_proprietary_camera-devicetree" path="vendor/qcom/proprietary/camera-devicetree"/>
+  <project remote="aospa" name="8650-kernel/vendor_qcom_proprietary_data-devicetree" path="vendor/qcom/proprietary/data-devicetree"/>
+  <project remote="aospa" name="8650-kernel/vendor_qcom_proprietary_display-devicetree" path="vendor/qcom/proprietary/display-devicetree"/>
+  <project remote="aospa" name="8650-kernel/vendor_qcom_proprietary_dsp-devicetree" path="vendor/qcom/proprietary/dsp-devicetree"/>
+  <project remote="aospa" name="8650-kernel/vendor_qcom_proprietary_eSE-devicetree" path="vendor/qcom/proprietary/eSE-devicetree"/>
+  <project remote="aospa" name="8650-kernel/vendor_qcom_proprietary_eva-devicetree" path="vendor/qcom/proprietary/eva-devicetree"/>
+  <project remote="aospa" name="8650-kernel/vendor_qcom_proprietary_graphics-devicetree" path="vendor/qcom/proprietary/graphics-devicetree"/>
+  <project remote="aospa" name="8650-kernel/vendor_qcom_proprietary_mm-devicetree" path="vendor/qcom/proprietary/mm-devicetree"/>
+  <project remote="aospa" name="8650-kernel/vendor_qcom_proprietary_mm-sys-devicetree" path="vendor/qcom/proprietary/mm-sys-devicetree"/>
+  <project remote="aospa" name="8650-kernel/vendor_qcom_proprietary_mmrm-devicetree" path="vendor/qcom/proprietary/mmrm-devicetree"/>
+  <project remote="aospa" name="8650-kernel/vendor_qcom_proprietary_nfc-devicetree" path="vendor/qcom/proprietary/nfc-devicetree"/>
+  <project remote="aospa" name="8650-kernel/vendor_qcom_proprietary_synx-devicetree" path="vendor/qcom/proprietary/synx-devicetree"/>
+  <project remote="aospa" name="8650-kernel/vendor_qcom_proprietary_video-devicetree" path="vendor/qcom/proprietary/video-devicetree"/>
+  <project remote="aospa" name="8650-kernel/vendor_qcom_proprietary_wlan-devicetree" path="vendor/qcom/proprietary/wlan-devicetree"/>
 </manifest>
